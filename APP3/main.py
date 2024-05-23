@@ -43,7 +43,7 @@ def main():
     text_area = tk.Text(root)
     text_area.insert(tk.INSERT, "Graph {\n\n\tA -> B (10) \n\tB -> C (20) \n\tD -> E (30) \n\tA -> E (12) \n\tB -> D (8)\n\n}")
     text_area.pack()
-    button = tk.Button(root, text="Aceptar", command=lambda: on_button_click(text_area))
+    button = tk.Button(root, text="Graficar", command=lambda: on_button_click(text_area))
     button.pack()
     root.mainloop()
 
