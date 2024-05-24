@@ -1,0 +1,6 @@
+get x;
+i = x;
+while (1 <= x) {
+put x;
+x = x - 1;
+}
