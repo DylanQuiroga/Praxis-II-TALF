@@ -12,7 +12,7 @@ statement
 
 getStmt: 'get' ID ';' ;
 assignStmt: ID '=' expr ';' ;
-putStmt: 'put' (ID | NUMBER) ';' ; // Modificado para aceptar números
+putStmt: 'put' (ID | NUMBER) ';' ; 
 whileStmt: 'while' '(' expr ')' '{' statement* '}' ;
 ifStmt
     : 'if' '(' expr ')' ifBlock (elseBlock)?
