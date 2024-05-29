@@ -17,7 +17,6 @@ def generate_graph(input_string):
     walker = ParseTreeWalker()
     walker.walk(listener, tree)
 
-    # Guarda el gráfico en un archivo .dot y genera la imagen
     listener.dot.save('graph.dot')
     listener.dot.render('graph.dot', format='png')
 
@@ -26,7 +25,7 @@ def show_graph():
     image = Image.open('graph.dot.png')
     photo = ImageTk.PhotoImage(image)
     label = tk.Label(window, image=photo)
-    label.image = photo  # Mantén una referencia a la imagen
+    label.image = photo 
     label.pack()
 
 def on_button_click(text_area):
