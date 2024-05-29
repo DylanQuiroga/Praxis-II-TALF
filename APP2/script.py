@@ -45,12 +45,12 @@ class VariableUsageVisitor(ScriptLVisitor):
         return None
 
     def visitIfStmt(self, ctx: ScriptLParser.IfStmtContext):
-        self.visit(ctx.expr())  # Visita la expresión de la condición 'if'
+        self.visit(ctx.expr())  
 
-        # Visita las declaraciones dentro del bloque 'if'
+      
         self.visit(ctx.ifBlock())
 
-        # Verifica si hay un bloque 'else' y visita las declaraciones dentro de él
+        
         if ctx.elseBlock() is not None:
             self.visit(ctx.elseBlock())
         return None
